@@ -1449,15 +1449,15 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2593891206015117072, guid: ef2b6e3a0904d0a488fb7a1bd47ce073, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7662967791126202651}
+      addedObject: {fileID: 785191886210822179}
   m_SourcePrefab: {fileID: 100100000, guid: ef2b6e3a0904d0a488fb7a1bd47ce073, type: 3}
 --- !u!1 &8090349431469316557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2593891206015117072, guid: ef2b6e3a0904d0a488fb7a1bd47ce073, type: 3}
   m_PrefabInstance: {fileID: 6033112379582676701}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &7662967791126202651
-BoxCollider2D:
+--- !u!60 &785191886210822179
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1498,9 +1498,29 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2.8125}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1, y: 0.03125}
+      - {x: 1, y: 0.4375}
+      - {x: 0.5625, y: 0.5625}
+      - {x: 0.625, y: 0.875}
+      - {x: 0.625, y: 0.96875}
+      - {x: 0.1875, y: 1.40625}
+      - {x: -0.1875, y: 1.40625}
+      - {x: -0.6875, y: 0.875}
+      - {x: -0.625, y: 0.5}
+      - {x: -1, y: 0.375}
+      - {x: -1, y: 0.0625}
+      - {x: -0.84375, y: -0.0625}
+      - {x: -0.34375, y: -0.0625}
+      - {x: -0.4375, y: -0.53125}
+      - {x: -0.4375, y: -0.96875}
+      - {x: -0.125, y: -1.40625}
+      - {x: 0.15625, y: -1.40625}
+      - {x: 0.4375, y: -0.90625}
+      - {x: 0.46875, y: -0.46875}
+      - {x: 0.65625, y: -0.09375}
+  m_UseDelaunayMesh: 0
 --- !u!4 &8090349431469316559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2593891206015117074, guid: ef2b6e3a0904d0a488fb7a1bd47ce073, type: 3}
@@ -1947,7 +1967,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2593891206015117072, guid: ef2b6e3a0904d0a488fb7a1bd47ce073, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8553568996932044657}
+      addedObject: {fileID: 7547576847072955509}
   m_SourcePrefab: {fileID: 100100000, guid: ef2b6e3a0904d0a488fb7a1bd47ce073, type: 3}
 --- !u!4 &6529374080606898617 stripped
 Transform:
@@ -1959,8 +1979,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2593891206015117072, guid: ef2b6e3a0904d0a488fb7a1bd47ce073, type: 3}
   m_PrefabInstance: {fileID: 8747016796516511403}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &8553568996932044657
-BoxCollider2D:
+--- !u!60 &7547576847072955509
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2001,6 +2021,26 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2.8125}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1, y: 0.03125}
+      - {x: 1, y: 0.4375}
+      - {x: 0.5625, y: 0.5625}
+      - {x: 0.625, y: 0.875}
+      - {x: 0.625, y: 0.96875}
+      - {x: 0.1875, y: 1.40625}
+      - {x: -0.1875, y: 1.40625}
+      - {x: -0.6875, y: 0.875}
+      - {x: -0.625, y: 0.5}
+      - {x: -1, y: 0.375}
+      - {x: -1, y: 0.0625}
+      - {x: -0.84375, y: -0.0625}
+      - {x: -0.34375, y: -0.0625}
+      - {x: -0.4375, y: -0.53125}
+      - {x: -0.4375, y: -0.96875}
+      - {x: -0.125, y: -1.40625}
+      - {x: 0.15625, y: -1.40625}
+      - {x: 0.4375, y: -0.90625}
+      - {x: 0.46875, y: -0.46875}
+      - {x: 0.65625, y: -0.09375}
+  m_UseDelaunayMesh: 0
