@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8689990185692926309}
   - component: {fileID: 8102110025614061661}
   - component: {fileID: 9199293896942648828}
-  - component: {fileID: 513594958133853813}
+  - component: {fileID: 1658696471168111019}
   m_Layer: 0
   m_Name: 'R-sideTileMap '
   m_TagString: Ground
@@ -124,8 +124,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &513594958133853813
-TilemapCollider2D:
+--- !u!61 &1658696471168111019
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -157,9 +157,18 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &284981982599888497
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +211,7 @@ GameObject:
   - component: {fileID: 8037731512243588621}
   - component: {fileID: 1342706399703500697}
   - component: {fileID: 131137415401515411}
-  - component: {fileID: 6293968805060606848}
+  - component: {fileID: 4682378048848375243}
   m_Layer: 0
   m_Name: 'R-sideTileMap  '
   m_TagString: Ground
@@ -315,8 +324,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &6293968805060606848
-TilemapCollider2D:
+--- !u!61 &4682378048848375243
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -348,9 +357,18 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4262891646169371657
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +428,7 @@ GameObject:
   - component: {fileID: 1712514417833733219}
   - component: {fileID: 8041367150077164020}
   - component: {fileID: 6377630178229405608}
-  - component: {fileID: 4264870961752974794}
+  - component: {fileID: 2840781070309838301}
   m_Layer: 0
   m_Name: 'L-sideTileMap '
   m_TagString: Ground
@@ -523,8 +541,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &4264870961752974794
-TilemapCollider2D:
+--- !u!61 &2840781070309838301
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -556,9 +574,18 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &5780637048142458244
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +597,7 @@ GameObject:
   - component: {fileID: 6944340799347759963}
   - component: {fileID: 565594559419890291}
   - component: {fileID: 5360966558571651036}
-  - component: {fileID: 2684036157923449173}
+  - component: {fileID: 6740522464170764505}
   m_Layer: 0
   m_Name: L-sideTileMap
   m_TagString: Ground
@@ -683,8 +710,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &2684036157923449173
-TilemapCollider2D:
+--- !u!61 &6740522464170764505
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -716,9 +743,18 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6862681433114418711
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +766,7 @@ GameObject:
   - component: {fileID: 7611308275146837973}
   - component: {fileID: 8518089947093232090}
   - component: {fileID: 8636419918340760316}
-  - component: {fileID: 3947803696950939117}
+  - component: {fileID: 1179084078680143562}
   m_Layer: 0
   m_Name: 'M-sideTileMap '
   m_TagString: Ground
@@ -843,8 +879,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &3947803696950939117
-TilemapCollider2D:
+--- !u!61 &1179084078680143562
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -875,10 +911,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_Offset: {x: -0.00000023841858, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 5, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.9876723, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &8526192969566271988
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +966,7 @@ GameObject:
   - component: {fileID: 898227025841914709}
   - component: {fileID: 4088409572149127057}
   - component: {fileID: 7283979521861612116}
-  - component: {fileID: 1344131067960095945}
+  - component: {fileID: 3638360451973789754}
   m_Layer: 0
   m_Name: 'M-sideTileMap '
   m_TagString: Ground
@@ -1034,8 +1079,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &1344131067960095945
-TilemapCollider2D:
+--- !u!61 &3638360451973789754
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1066,10 +1111,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_Offset: {x: -0.0073308945, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 9, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.019325, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1688324784060104172
 PrefabInstance:
   m_ObjectHideFlags: 0
