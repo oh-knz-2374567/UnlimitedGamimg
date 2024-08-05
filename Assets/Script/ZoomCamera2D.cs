@@ -4,7 +4,7 @@ using System.Collections;
 public class ZoomCamera2D : MonoBehaviour
 {
 
-	[SerializeField] Transform target1 = null, target2 = null;
+	[SerializeField] Transform target1, target2;
 	[SerializeField] Vector2 offset = new Vector2(1, 1);
 
 	private float screenAspect = 0;

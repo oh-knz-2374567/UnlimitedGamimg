@@ -11,7 +11,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float GameOverPosition;//ゲームオーバーになるY軸の座標
 
     [SerializeField] bool isJumping = true;//接地判定
-    [SerializeField] bool isGameOver = false;//ゲームオーバー判定
+    [SerializeField] public bool isGameOver = false;//ゲームオーバー判定
+    [SerializeField] bool isNotMoving = false;//ゲームオーバーにつき、操作禁止判定
 
     [SerializeField] GameObject Player;
     [SerializeField] GameObject FirstPosition;//初期位置
@@ -27,13 +28,16 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float move = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2( move * NormalSpeed, rb.velocity.y);
-
-　　　　//キー入力一回につき、ジャンプ力が上昇
-        if (Input.GetKeyDown(KeyCode.Space)&& isJumping)
+        if (isNotMoving == false)
         {
-            JumpForce += JumpForceUpRate;
+            float move = Input.GetAxis("Horizontal");
+            rb.velocity = new Vector2(move * NormalSpeed, rb.velocity.y);
+        }
+
+        //キー入力一回につき、ジャンプ力が上昇
+        if (Input.GetKeyDown(KeyCode.Space)&& isJumping == true)
+        {
+            JumpForce *= JumpForceUpRate;
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
             isJumping = false;
         }
@@ -41,16 +45,17 @@ public class PlayerMove : MonoBehaviour
 　　　　//キー入力一回につき、速度が上昇
         if (Input.GetKeyDown(KeyCode.D) & isJumping == true)
         {
-            NormalSpeed += SpeedUpRate;
+            NormalSpeed *= SpeedUpRate;
         }
         if (Input.GetKeyDown(KeyCode.A) & isJumping == true)
         {
-            NormalSpeed += SpeedUpRate;
+            NormalSpeed *= SpeedUpRate;
         }
 
         if (GameOverPosition >= Player.transform.position.y)
         {
             isGameOver = true;
+            isNotMoving = true;
         }
     }
 
