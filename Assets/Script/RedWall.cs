@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class RedWall : MonoBehaviour
 {
-    [SerializeField] GameObject Player; //プレイヤー
+    [SerializeField] Transform Player; //プレイヤー
+
     [SerializeField] float Speed; //速度
     [SerializeField] float EnemySpeed; //追いかける速度
     [SerializeField] float SpeedRate; //速度にかける倍率
     [SerializeField] float DelayTime;//遅延速度
     [SerializeField] float ElapsedTime;//経過時間
-   
+
     private void Update()
     {
         ElapsedTime += Time.deltaTime;
@@ -25,7 +26,9 @@ public class RedWall : MonoBehaviour
             //プレイヤーの速度をもとにエネミーの速度を決める
             EnemySpeed = Speed * SpeedRate;
 
-
+            Vector2 direction = Player.position - transform.position;
+            direction.Normalize();
+            transform.position = Vector2.MoveTowards(transform.position, Player.position, EnemySpeed * Time.deltaTime);
         }
     }
 }

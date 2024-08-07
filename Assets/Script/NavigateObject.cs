@@ -10,7 +10,7 @@ public class NavigateObject : MonoBehaviour
     private void Update()
     {
         float x = Player.transform.position.x;
-        transform.position = new Vector2(x, -4);
+        transform.position = new Vector2(x, -2);
 
         TargetCameraObject = transform.position;
     }
