@@ -20,9 +20,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] public bool isGameOver = false;//ゲームオーバー判定
     [SerializeField] bool isNotMoving = false;//ゲームオーバーにつき、操作禁止判定
 
-    [SerializeField] Text DistanceText;
-    [SerializeField] Text DisText01;
-    [SerializeField] GameObject Player;
+    [SerializeField] Text DistanceText;//距離を表示するテキスト
+    [SerializeField] Text DisText01;//ゲームオーバー時に距離を表示するスクリプト
+    [SerializeField] Transform Player;//プレイヤー
     [SerializeField] GameObject FirstPosition;//初期位置
 
     private Rigidbody2D rb;
@@ -46,6 +46,17 @@ public class PlayerMove : MonoBehaviour
         {
             float move = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(move * NormalSpeed, rb.velocity.y);
+
+
+            //キャラクターの進行方向によって向きを変える
+            if (move < 0)
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            else if (move > 0)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
         }
 
         //キー入力一回につき、ジャンプ力が上昇
@@ -57,11 +68,11 @@ public class PlayerMove : MonoBehaviour
         }
 
 　　　　//キー入力一回につき、速度が上昇
-        if (Input.GetKeyDown(KeyCode.D) & isJumping == true)
+        if (Input.GetKeyDown(KeyCode.D) & Player.transform.position.y <= 3)
         {
             NormalSpeed *= SpeedUpRate;
         }
-        if (Input.GetKeyDown(KeyCode.A) & isJumping == true)
+        if (Input.GetKeyDown(KeyCode.A) & Player.transform.position.y <= 3)
         {
             NormalSpeed *= SpeedUpRate;
         }
@@ -77,10 +88,11 @@ public class PlayerMove : MonoBehaviour
         TravelDistance = (transform.position.x -StartPosition.x);
         DistanceText.text = "距離: " + TravelDistance.ToString("F1") + "m";
         DisText01.text = "進んだ距離:　　　　　 " + TravelDistance.ToString("F1") + "m";
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
+    {   //速度が速くなると、ジャンプをしていなくても飛ぶので、高さを設けて判定を取る
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = true;

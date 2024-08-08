@@ -1847,7 +1847,7 @@ MonoBehaviour:
   isNotMoving: 0
   DistanceText: {fileID: 1613204932}
   DisText01: {fileID: 1869109221}
-  Player: {fileID: 1515017931}
+  Player: {fileID: 1515017934}
   FirstPosition: {fileID: 1152295886}
 --- !u!212 &1515017933
 SpriteRenderer:
@@ -1910,7 +1910,7 @@ Transform:
   m_GameObject: {fileID: 1515017931}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.35, y: 1.49, z: 0}
+  m_LocalPosition: {x: 23.35, y: 1.14, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children:
