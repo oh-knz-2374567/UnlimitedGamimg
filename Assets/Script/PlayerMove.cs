@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float JumpForceUpRate;//ジャンプ力上昇率
     [SerializeField] float GameOverPosition;//ゲームオーバーになるY軸の座標
     [SerializeField] float TravelDistance;//進んだ距離
+    [SerializeField] float CurrentTravelDistance;//現在の進んだ距離
     [SerializeField] public float CurrentSpeed;//現在の速度
 
 
@@ -68,11 +69,11 @@ public class PlayerMove : MonoBehaviour
         }
 
 　　　　//キー入力一回につき、速度が上昇
-        if (Input.GetKeyDown(KeyCode.D) & Player.transform.position.y <= 3)
+        if (Input.GetKey(KeyCode.D) & Player.transform.position.y < 3 & isJumping == true)
         {
             NormalSpeed *= SpeedUpRate;
         }
-        if (Input.GetKeyDown(KeyCode.A) & Player.transform.position.y <= 3)
+        if (Input.GetKey(KeyCode.A) & Player.transform.position.y < 3 & isJumping == true)
         {
             NormalSpeed *= SpeedUpRate;
         }
@@ -82,12 +83,18 @@ public class PlayerMove : MonoBehaviour
         {
             isGameOver = true;
             isNotMoving = true;
+
+            CurrentTravelDistance = TravelDistance;
         }
 
         //進んだ距離をテキスト表示（小数第一位まで）
-        TravelDistance = (transform.position.x -StartPosition.x);
+        if (isGameOver == false)
+        {
+            TravelDistance = (transform.position.x - StartPosition.x);
+        }
+
         DistanceText.text = "距離: " + TravelDistance.ToString("F1") + "m";
-        DisText01.text = "進んだ距離:　　　　　 " + TravelDistance.ToString("F1") + "m";
+        DisText01.text = "進んだ距離:　　　　　 " + CurrentTravelDistance.ToString("F1") + "m";
 
     }
 

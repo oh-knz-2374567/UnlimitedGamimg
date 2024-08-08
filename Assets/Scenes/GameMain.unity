@@ -1835,7 +1835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NormalSpeed: 5
-  SpeedUpRate: 1.05
+  SpeedUpRate: 1.00005
   JumpForce: 5
   JumpForceUpRate: 1.025
   GameOverPosition: -1
