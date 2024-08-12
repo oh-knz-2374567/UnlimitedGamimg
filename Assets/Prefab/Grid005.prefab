@@ -1347,6 +1347,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5658634052649925034}
     m_Modifications:
+    - target: {fileID: 2491116113269401538, guid: 64ad26f35d95fc84997ad93db1292861, type: 3}
+      propertyPath: pushSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3426554738557163251, guid: 64ad26f35d95fc84997ad93db1292861, type: 3}
       propertyPath: m_TagString
       value: Ground
