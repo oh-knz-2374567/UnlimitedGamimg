@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float GameOverPosition;//ゲームオーバーになるY軸の座標
     [SerializeField] float TravelDistance;//進んだ距離
     [SerializeField] float CurrentTravelDistance;//現在の進んだ距離
+    [SerializeField] float HighTravelDistance;//今まで進んだ最大距離
     [SerializeField] public float CurrentSpeed;//現在の速度
 
 
@@ -23,6 +24,7 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] Text DistanceText;//距離を表示するテキスト
     [SerializeField] Text DisText01;//ゲームオーバー時に距離を表示するスクリプト
+    [SerializeField] Text DisText02;//ゲームオーバー時点の最大距離を表示するスクリプト
     [SerializeField] Transform Player;//プレイヤー
     [SerializeField] GameObject FirstPosition;//初期位置
 
@@ -95,7 +97,11 @@ public class PlayerMove : MonoBehaviour
 
         DistanceText.text = "距離: " + TravelDistance.ToString("F1") + "m";
         DisText01.text = "進んだ距離:　　　　　 " + CurrentTravelDistance.ToString("F1") + "m";
-
+        if (CurrentTravelDistance > HighTravelDistance)
+        {
+            HighTravelDistance = CurrentTravelDistance;
+        }
+        DisText02.text = "最高距離:             " + HighTravelDistance.ToString("F1") + "m";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

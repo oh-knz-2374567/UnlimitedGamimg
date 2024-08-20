@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject MonitorUI;
     [SerializeField] GameObject GameOverText;
     [SerializeField] GameObject DisText01;
+    [SerializeField] GameObject DisText02;
     [SerializeField] Text FPSText;
 
     private float deltaTime = 0.0f;
@@ -23,6 +24,7 @@ public class UIManager : MonoBehaviour
        MonitorUI.SetActive(false);
        GameOverText.SetActive(false);
        DisText01.SetActive(false);
+       DisText02.SetActive(false);
     }
 
     private void Update()
@@ -36,7 +38,7 @@ public class UIManager : MonoBehaviour
             // FPSを計算
             float fps = 1.0f / deltaTime;
             // テキストにFPSを表示
-            FPSText.text = string.Format("{0:0.} FPS", fps);
+            FPSText.text = string.Format("{0:0.} FPS" , fps);
 
             deltaTime = 0.0f;
             TimeLeft = UpdateIntarval;
@@ -51,6 +53,7 @@ public class UIManager : MonoBehaviour
             MonitorUI.SetActive(true);
             GameOverText.SetActive(true);
             DisText01.SetActive(true);
+            DisText02.SetActive(true);
         }
     }
 }
